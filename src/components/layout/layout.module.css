@@ -7,7 +7,7 @@
 .footerBarButtons {
     display: flex;
     gap: 2px;
-    justify-content: center;
+    justify-content: right;
     margin-top: 10px;
 }
 
