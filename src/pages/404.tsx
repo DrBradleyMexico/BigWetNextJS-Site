@@ -3,6 +3,7 @@ import s from "@/components/Articles.module.css"
 import Min from "@/components/svgs/min";
 import Max from "@/components/svgs/max";
 import Close from "@/components/svgs/close";
+import Footer from "@/components/layout/footer";
 
 const NotFound = () => {
     return (
@@ -23,11 +24,12 @@ const NotFound = () => {
                         <img className={s.homeImageMore} src={"/spinningpikachu.gif"} alt="" />
                     </div>
                     <div className={s.articles}>
-                        <Link href="/">
+                        <Link className={s.article} href="/">
                             {"go back from once ye came"}
                         </Link>
                     </div>
                 </div>
+                <Footer />
             </div>
         </div>
     );

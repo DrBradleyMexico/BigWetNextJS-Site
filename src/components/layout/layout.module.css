@@ -4,28 +4,25 @@
     color: black;
 }
 
-.nav {
+.footerBarButtons {
     display: flex;
-    align-content: center;
+    gap: 2px;
     justify-content: center;
-    align-items: center;
-    font-size: 20px;
-    border-width: 1px 0;
-    list-style: none;
-    margin: 10px;
-    padding: 0;
-    text-align: center;
+    margin-top: 10px;
 }
 
-.footer {
-    display: flex;
-    font-size: 16px;
-    text-align: center;
-    color: black;
-    margin-top: 20px;
-    flex-direction: row;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 50px;
+.button:hover {
+    cursor: pointer;
+}
+
+.button:active {
+    cursor: pointer;
+    background-color: rgb(163, 160, 160);
+    box-shadow: inset -1px -1px #0a0a0a, inset 2px 2px grey;
+}
+
+.border {
+    border: none;
+    box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #dfdfdf, inset -2px -2px grey, inset 2px 2px #fff;
+    background: silver;
 }

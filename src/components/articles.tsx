@@ -1,9 +1,9 @@
 import s from "@/components/Articles.module.css"
 import Link from "next/link"
-import Image from "next/image";
 import Min from "./svgs/min";
 import Max from "./svgs/max";
 import Close from "./svgs/close";
+import Footer from "./layout/footer";
 
 
 const Articles = () => {
@@ -26,24 +26,24 @@ const Articles = () => {
                             <img className={s.homeImageMore} src={"/meirl5.png"} alt="" />
                         </div>
                         <div className={s.articles}>
-                            <Link href="https://infosec.party/" target="_blank">
+                            <Link className={s.article} href="https://infosec.party/" target="_blank">
                                 {"infosec party: cysec resources and career tools"}
                             </Link>
-                            <Link href="https://thepaddyfields.xyz/" target="_blank">
+                            <Link className={s.article} href="https://thepaddyfields.xyz/" target="_blank">
                                 {"the paddy fields blog"}
                             </Link>
-                            <Link href="https://github.com/DrBradleyMexico/BlackKingdomGameDemo" target="_blank">
+                            <Link className={s.article} href="https://github.com/DrBradleyMexico/BlackKingdomGameDemo" target="_blank">
                                 {"black kingdom rpg game concept demo"}
                             </Link>
-                            <Link href="https://bensden.xyz/" target="_blank">
+                            <Link className={s.article} href="https://bensden.xyz/" target="_blank">
                                 {"bens development blog"}
                             </Link>
-                            <Link href="/secret">
+                            <Link className={s.article} href="/secret">
                                 {"secret garfield folder. DO NOT click"}
                             </Link>
-
                         </div>
                     </div>
+                    <Footer />
                 </div>
             </div>
         </section>
