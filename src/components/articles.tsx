@@ -38,6 +38,9 @@ const Articles = () => {
                             <Link href="https://bensden.xyz/" target="_blank">
                                 {"bens development blog"}
                             </Link>
+                            <Link href="/secret">
+                                {"secret garfield folder. DO NOT click"}
+                            </Link>
 
                         </div>
                     </div>
