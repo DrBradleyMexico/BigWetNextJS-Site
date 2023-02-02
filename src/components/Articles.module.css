@@ -1,0 +1,79 @@
+.window {
+  padding: 3px;
+}
+
+.border {
+  border: none;
+  box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #dfdfdf, inset -2px -2px grey, inset 2px 2px #fff;
+  background: silver;
+  /* padding: 3px; */
+}
+
+.windowBody {
+  margin: 8px;
+}
+
+.titleBar {
+  background: linear-gradient(90deg, navy, #1084d0);
+  padding: 3px 2px 3px 3px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.titleBarText {
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0;
+  margin-right: 24px;
+}
+
+.titleBarButtons {
+  display: flex;
+  gap: 2px;
+}
+
+.button {}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.button:active {
+  cursor: pointer;
+  background-color: rgb(163, 160, 160);
+  box-shadow: inset -1px -1px #0a0a0a, inset 2px 2px grey;
+}
+
+.homeContent {
+  display: flex;
+}
+
+.articles {
+  display: flex;
+  /* flex value here is arbitrary */
+  flex: 2;
+  flex-direction: column;
+  border: inset;
+  background: #fff;
+}
+
+.homeImage {
+  margin-right: 10px;
+  /* NOTE this flex value makes it 1/3 the size since our total flex is 3 */
+  flex: 1;
+
+}
+
+.homeImageMore {
+  width: 100%;
+}
+
+/* NOTE setting conditional css properties by using screen size as the if statement */
+@media (max-width: 550px) {
+  .homeContent {
+    flex-direction: column;
+  }
+
+  .homeImage {}
+}

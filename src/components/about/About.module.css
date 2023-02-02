@@ -1,0 +1,28 @@
+.aboutSection {}
+
+.aboutText::first-letter {
+  font-size: 40px;
+  font-weight: 800;
+}
+
+.aboutText {
+  text-align: left;
+}
+
+.aboutImage {
+  border-radius: 50%;
+  float: left;
+  shape-outside: circle(50%);
+  margin-right: 2rem;
+}
+
+@media (max-width: 550px) {
+  .aboutImage {
+    float: none;
+
+  }
+
+  .aboutSection {
+    text-align: center;
+  }
+}

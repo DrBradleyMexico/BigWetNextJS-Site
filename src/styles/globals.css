@@ -1,0 +1,50 @@
+html,
+body {
+    align-items: center;
+    justify-content: center;
+    background-size: 700% 700%;
+    background-image: linear-gradient(-45deg,
+            rgb(236, 209, 158) 0%,
+            rgb(240, 224, 189) 25%,
+            rgb(235, 131, 113) 51%,
+            rgb(221, 169, 235) 100%);
+    animation: AnimateBG 20s ease infinite;
+}
+
+@keyframes AnimateBG {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+main {
+    max-width: 800px;
+    margin: auto;
+}
+
+a:link {
+    text-decoration: none;
+    color: black;
+}
+
+a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+a:active {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+    background-color: burlywood;
+}
