@@ -32,7 +32,7 @@ const Articles = () => {
                             <Link href="https://thepaddyfields.xyz/" target="_blank">
                                 {"the paddy fields blog"}
                             </Link>
-                            <Link href="https://github.com/GremlinOnTheComputer/BlackKingdomGameDemo" target="_blank">
+                            <Link href="https://github.com/DrBradleyMexico/BlackKingdomGameDemo" target="_blank">
                                 {"black kingdom rpg game concept demo"}
                             </Link>
                             <Link href="https://bensden.xyz/" target="_blank">
