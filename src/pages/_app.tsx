@@ -3,8 +3,8 @@ import type { AppProps } from 'next/app'
 import { Source_Code_Pro } from '@next/font/google'
 import { Layout } from '@/components/layout/layout'
 
-const inter = Source_Code_Pro({
-  weight: '300', 
+const sourceCodePro = Source_Code_Pro({
+  weight: '300',
   subsets: ['latin']
 })
 
@@ -13,12 +13,12 @@ export default function App({ Component, pageProps }: AppProps) {
     <>
       <style jsx global>{`
         html {
-          font-family: ${inter.style.fontFamily};
+          font-family: ${sourceCodePro.style.fontFamily};
         }
       `}</style>
       <Layout>
-      <Component {...pageProps} />
+        <Component {...pageProps} />
       </Layout>
-   </>
+    </>
   )
 }
