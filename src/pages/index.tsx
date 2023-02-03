@@ -1,9 +1,9 @@
-import Articles from "@/components/articles"
+import Links from "@/components/links"
 
 export default function Home() {
     return (
         <div>
-            <Articles />
+            <Links />
         </div>
     )
 }

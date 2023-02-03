@@ -1,0 +1,55 @@
+---
+title: emojis in typescript for NextJS
+date: 02/02/2023
+tags: emoji, typescript, next, nextjs, type
+---
+
+# How to add emojis in NextJS using TypeScript
+
+![image info](/emojitypescript.png)
+
+Emojis have become a fun part of modern communication and adding them to your NextJS application can make your user interface more interesting and engaging. In this post, we'll explore how to add emojis to your NextJS app.
+
+## Simple solutions to implement emojis in NextJS
+
+The simplest way to add emojis to your NextJS app is by copying and pasting the emoji character directly into your code. For example:
+
+```html showLineNumbers
+<p>😎 Let's add some emojis to our NextJS app!</p>
+```
+
+This works fine enough for some scenarios, but older browsers may have issues and ESLint is not going to like it! Since using pasted emojis throws an ESLint error and can cause issues with other text and browsers, let's look at a better solution.
+
+## Creating an Emoji component
+
+Let's create a reusable emoji component that we can plug in anywhere that will incorporate our emojis without issue.
+
+```ts showLineNumbers /Emoji/2
+interface emojiProps {
+    //this is the label screenreaders will read
+    ariaLabel?: string;
+    symbol: string;
+}
+
+const Emoji = ({ ariaLabel, symbol }: emojiProps) => (
+    <span
+        className="emoji"
+        role="img"
+        aria-label={ariaLabel ? ariaLabel : ""}
+        aria-hidden={ariaLabel ? "false" : "true"}
+    >
+        {symbol}
+    </span>
+);
+export default Emoji;
+```
+We will give the component the label and symbol props and if a label exists, it will generate an aria-label which can be read by screen-readers. Note we also just give the props the any type out of convenience, but there are several libraries available you could use to define a proper type in TypeScript.
+
+Import your Emoji component to the file you want to use it in and then you can call it like so:
+
+```ts showLineNumbers /Emoji/
+import Emoji from "../emoji";
+
+<Emoji symbol="😤" ariaLabel="triumph face emoji" />
+```
+*Note that the label is completely optional but it is good practice to include.*

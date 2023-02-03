@@ -1,5 +1,5 @@
 import Link from "next/link";
-import s from "@/components/Articles.module.css"
+import s from "@/components/Links.module.css"
 import Min from "@/components/svgs/min";
 import Max from "@/components/svgs/max";
 import Close from "@/components/svgs/close";

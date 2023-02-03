@@ -1,14 +1,17 @@
-import React from 'react';
+interface emojiProps {
+    //this is the label screenreaders will read
+    ariaLabel?: string;
+    symbol: string;
+}
 
-// TODO fix type later
-const Emoji = (props: any) => (
+const Emoji = ({ ariaLabel, symbol }: emojiProps) => (
     <span
         className="emoji"
         role="img"
-        aria-label={props.label ? props.label : ""}
-        aria-hidden={props.label ? "false" : "true"}
+        aria-label={ariaLabel ? ariaLabel : ""}
+        aria-hidden={ariaLabel ? "false" : "true"}
     >
-        {props.symbol}
+        {symbol}
     </span>
 );
 export default Emoji;

@@ -1,4 +1,4 @@
-import s from "@/components/Articles.module.css"
+import s from "@/components/Links.module.css"
 import Link from "next/link"
 import Min from "./svgs/min";
 import Max from "./svgs/max";
@@ -6,7 +6,7 @@ import Close from "./svgs/close";
 import Footer from "./layout/footer";
 
 
-const Articles = () => {
+const Links = () => {
     return (
         <section>
             <div className={`${s.border} ${s.window}`}>
@@ -50,4 +50,4 @@ const Articles = () => {
     );
 }
 
-export default Articles;
+export default Links;
