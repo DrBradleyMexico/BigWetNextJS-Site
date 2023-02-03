@@ -43,7 +43,8 @@ const Emoji = ({ ariaLabel, symbol }: emojiProps) => (
 );
 export default Emoji;
 ```
-We will give the component the label and symbol props and if a label exists, it will generate an aria-label which can be read by screen-readers. Note we also just give the props the any type out of convenience, but there are several libraries available you could use to define a proper type in TypeScript.
+We will give the component the ariaLabel and symbol props and if an ariaLabel exists, it will generate an aria-label which can be read by screen-readers.
+We use the ariaLabel and symbol in our function and give them the emojiProps types from our interface.
 
 Import your Emoji component to the file you want to use it in and then you can call it like so:
 
@@ -52,4 +53,4 @@ import Emoji from "../emoji";
 
 <Emoji symbol="😤" ariaLabel="triumph face emoji" />
 ```
-*Note that the label is completely optional but it is good practice to include.*
+*Note that the ariaLabel is completely optional but it is good practice to include.*
