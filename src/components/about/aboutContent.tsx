@@ -12,7 +12,7 @@ const AboutContent = () => {
             </h1>
             <p className={s.aboutText}>
                 {"hello! i am doctor bradley mexico and welcome to my very cool and fun website. this website has almost no purpose other than to teach myself some NextJS concepts while sharing some things me and my friends have made. if you'd like to see my joke twitter as well as my github, check the links in the footer. you can email me by smashing that contact link in the navbar. despite my offputting website, i am a friendly little guy who likes to meet and chat with people "}
-                <Emoji symbol="🙂" label="smiley face" />
+                <Emoji symbol="🙂" ariaLabel="smiley face" />
             </p>
         </div>
     );
