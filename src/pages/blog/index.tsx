@@ -12,7 +12,7 @@ export default function Articles({ posts }: { posts: PostMeta[] }) {
         <section>
             <div className={`${s.border} ${s.window}`}>
                 <div className={s.titleBar}>
-                    <div className={s.titleBarText}>{'articles.html'}
+                    <div className={s.titleBarText}>{'blog.html'}
                     </div>
                     <div className={s.titleBarButtons}>
                         <button className={`${s.border} ${s.button}`}><Min></Min></button>

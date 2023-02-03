@@ -12,7 +12,7 @@ const Footer = () => {
             </button>
             <button className={`${s.border} ${s.button}`}>
                 <Link href="/blog">
-                    <Emoji symbol="✏️" ariaLabel="pencil emoji" />articles
+                    <Emoji symbol="✏️" ariaLabel="pencil emoji" />blog
                 </Link>
             </button>
             <button className={`${s.border} ${s.button}`}>

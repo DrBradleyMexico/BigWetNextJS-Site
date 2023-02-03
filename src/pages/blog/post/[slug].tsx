@@ -8,6 +8,7 @@ import rehypeExternalLinks from "rehype-external-links";
 import rehypePrettyCode from "rehype-pretty-code";
 import rehypeSlug from "rehype-slug";
 import s from "@/styles/Blog.module.css"
+import Footer from "@/components/layout/footer";
 
 
 interface MDXPost {
@@ -44,6 +45,7 @@ export default function Post({ post }: { post: MDXPost }) {
             <div className={s.blogPostContainer}>
                 <MDXRemote
                     {...post.source} />
+                <Footer />
             </div>
         </>
     )
