@@ -28,7 +28,7 @@ export default function Articles({ posts }: { posts: PostMeta[] }) {
                         </div>
                         <div className={s.articles}>
                             {posts.map((post) => (
-                                <Link className={s.article} href={`/blog/post/${post.slug}`} target="_blank">
+                                <Link key={post.slug} className={s.article} href={`/blog/post/${post.slug}`} target="_blank">
                                     {post.title}
                                 </Link>
                             ))}
