@@ -1,0 +1,107 @@
+---
+title: "python text rpg game in terminal"
+date: "Feb 10 2023"
+tags: python, games, videogames, terminal, class, classes, game, video game
+---
+
+# The versatility of Python
+
+![image info](/blackkingdomplay.png)
+
+Python is a useful programming language in Data Science and is considered one of the more human-readable programming languages. 
+Although it has a reputation for analyzing data using libraries like pandas, Matplotlib, and others, it is versatile enough to be used 
+for a variety of other purposes. 
+
+## Making games with Python
+
+Python is an object-oriented programming language, where classes can be seen almost like a blueprint for creating the objects. We can take advantage of that 
+by creating classes for our characters.
+
+```py showLineNumbers /class/1
+class Character:
+
+    def __init__(self, name, description, hp, physique, finesse, weapon, loot, exp, chat_friendly):
+        self.name = name
+        self.description = description
+        self.hp = hp
+        self.physique = physique
+        self.finesse = finesse
+        self.weapon = weapon
+        self.loot = loot
+        self.exp = exp
+        self.chat_friendly = chat_friendly
+```
+
+Here, we have given our characters 9 characteristics. A name, a description, a total health point value (hp), some attribute scores including 
+physique and finesse, a weapon, loot (we will make this an array of loot that can be obtained from the character), an experience points value to reward 
+if they are defeated in battle, and a boolean characteristic to see if they are willing to talk to the player or not.
+
+Something interesting about the Character class is we can even define a sort of behavior within it. So let's add an attack function wherein two parameters are passed, 
+the character, and the character they are in combat with. We'll just say themselves and an other. This can be called to engage in combat to the death!
+
+```py showLineNumbers /def/1-2
+class Character:
+
+    def __init__(self, name, description, hp, physique, finesse, weapon, loot, exp, chat_friendly):
+        self.name = name
+        self.description = description
+        self.hp = hp
+        self.physique = physique
+        self.finesse = finesse
+        self.weapon = weapon
+        self.loot = loot
+        self.exp = exp
+        self.chat_friendly = chat_friendly
+
+    def attack(self, other):
+        time.sleep(1.50)
+        print(f'\n{self.name} hit {other.name} with their {self.weapon.name}!')
+        roll = random.randint(1, 6)
+        damage = self.weapon.attack + round(self.physique/2) + roll
+        time.sleep(1.50)
+        print(f'Attack did ' + str(damage) + " damage!")
+        other.hp -= damage
+        time.sleep(1.50)
+        print(f'{other.name} has {other.hp} HP remaining!')
+```
+
+I've added "import time" to access a module that allows me to add some dramatic pauses during combat 😄. You'll notice something interesting here, 
+did I just reference a weapon's own method? The answer is yes! I even created a class for weapons themselves to recall their attack values in combat!
+
+```py showLineNumbers /Weapon/1
+class Weapon:
+    def __init__(self, name, attack):
+        self.name = name
+        self.attack = attack
+```
+
+By now, you're probably starting to see just how versatile an object-oriented programming language can be. We can proceed to construct characters as 
+individuals who are a part of the Character class. In this demonstration, this is effectively every person in the game. Let's create two characters:
+
+```py showLineNumbers /Character/1-2
+mel = Character("Mel", "a young woman in black dress", 30, 10, 8, fists, ["Charcoal Ring", "Junk"], 
+300, True)
+
+lyle = Character("Lyle", "a young man in black dress", 30, 10, 8, fists, ["Charcoal Ring", "Junk"], 
+300, False)
+```
+
+Both Mel and Lyle are now Characters in the game. They each have a name, a description, some stats, a weapon, a loot table array, experience points values, 
+and a boolean which determines whether they are willing to talk to the player or not. You will notice these characters are very similar other than the fact 
+that Mel will talk to the player while Lyle will not.
+
+Notice how in Python we can effortlessly combine strings, integers, other classes, arrays, and booleans all in the same class. And we didn't even have to specify 
+any of the types! 🤯
+
+This is one of the really useful functionalities about Python: implicit conversion or implicit typing. Python will convert data types implicitly during compilation, 
+meaning we can be free to set variables and mix data types as we see fit without worrying about whether or not Python will throw an error or get confused. In other words, 
+we don't need to specify that "30" is an integer, even though we could, because Python will implicity assume that the number "30" should be an integer.
+
+## Takeaways
+
+I won't go too much more in to detail about the game or else I'd be writing all day, but take a look at the main.py file over 
+<u>[on my github](https://github.com/DrBradleyMexico/BlackKingdomGameDemo)</u> 
+to see how all the pieces fit together. You can see that the game is essentially just a set of classes which are then 
+repeatedly called in a series of mostly just if-else statements. 
+
+It is insane how just a few basic concepts in Python can be used to create interactive programs like this! 
