@@ -1,0 +1,48 @@
+---
+title: "overthewire decoding - level 10 to 11"
+date: "Mar 06 2023"
+tags: SSH, hacking, games, CLI, terminal, game, linux, decode, decoding, base64
+---
+
+# Bandit Labs and Overthewire
+
+![image info](/overthewire.png)
+
+<u>[Overthewire](https://overthewire.org/wargames/bandit/)</u> from Bandit Labs is a great introductory game with a series of levels designed to take your Linux/hacking skills to the next level. 
+A lot of people interested in information security and computing in general will often complete these excercises as a way to flex their knowledge and skills, 
+maybe even learning a thing or two along the way! All levels can be accessed by SSHing into them, provided you have the password from the previous level's solution.
+
+## Overthewire Level 10 to 11
+
+Just to demonstrate a quick excercise to flex that big hacker brain, let's take an in-depth look at <u>[level 10 which leads into level 11](https://overthewire.org/wargames/bandit/bandit11.html).</u> 
+
+As the html page for the level states, the password to the next level is in a "data.txt" file with base64 encoded data, so let's take a look. For the sake of getting right into it, 
+you can access the level from your CLI by entering the following line and password:
+
+```linux showLineNumbers /ssh/1
+ssh bandit.labs.overthewire.org -p 2220 -l bandit10
+G7w8LIi6J3kTb8A7j9LgrywtEUlyyp6s
+```
+
+This should get you into the level where we can begin! Let's start by seeing what's in here with "ls" to list the files and directories and read the contents of what we find with "cat":
+
+```linux showLineNumbers /ls/1 /cat/1
+ls
+data.txt
+cat data.txt
+VGhlIHBhc3N3b3JkIGlzIElGdWt3S0dzRlc4TU9xM0lSRnFyeEUxaHhUTkViVVBSCg==
+```
+
+Alright! So we have found a file called "data.txt" and read its contents. However, as the prompt for the level states, this data is base64-encoded. Fortunately for us, 
+you can actually decode data using the "-d" flag in your Linux terminal! Let's read the data file again, but this time feed it to base64 decoding command:
+
+```linux showLineNumbers /-d/1
+cat data.txt | base64 -d
+The password is 6zPeziLdR2RKNdNYFNb6nVCKzphlXHBM
+```
+
+Boom! Easy as that! This is a good launching point for using decoding flags in future excercises and a quick easy win. Go ahead and try using decoding flags on other encoding types 
+and see what you can find 👀
+
+
+

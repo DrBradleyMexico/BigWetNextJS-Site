@@ -1,0 +1,38 @@
+---
+title: "cron jobs explained"
+date: "Mar 06 2023"
+tags: cron, cronjobs, hacking, bash, CLI, terminal, bash scripting, Linux
+---
+
+# Creating cronjobs in Linux
+
+![image info](/clock.png)
+
+Cron Jobs in Linux allow you to set up regularly occuring file executions at the times you specify. As you can already imagine, this can be super useful 
+for all kinds of automations! Let's explore this by setting up a Cron Job that regularly pulls the current time and date every Friday at noon.
+
+## Setting up a bash script to run
+
+Let's start by creating an empty "dates.txt" file and a bash script file called "times.sh". In your "times.sh" file, create a bash script like so:
+
+```Linux showLineNumbers
+#!/bin/bash
+
+date="$(date)"
+echo "$date" >> dates.txt
+```
+The "#" is just a comment indicating this is a bash script to run in the /bin/bash location. We can then create a date variable and have the script print that date, appending it 
+to our "dates.txt" file.
+
+## Creating a re-occuring cron job to execute our script
+
+If you don't already have a crontab for your user, you can simply type "crontab -e" to create one. From here choose option 1 and at the very bottom of the cron file add the following: 
+
+```Linux showLineNumbers
+0 12 * * 5 /home/YourUserName/times.sh
+```
+Write out the cron file and exit. This line above will have our "times.sh" script run every Friday at noon. If you need a reference for cron job time formatting syntax, check out 
+<u>[crontab guru](https://crontab.guru/)</u> for reference. It's a super useful site for this!
+
+Now that the cronfile is updated, it will run your "time.sh" file regularly! If we wait till Friday at noon, you will see the "dates.txt" file gets the time and date information added to it on a new line. 
+Super cool and easy! There's a million different ways you could use cron jobs but I hope that explained the basics in an easy-to-understand way.
