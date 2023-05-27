@@ -21,7 +21,7 @@ const Footer = () => {
                 </Link>
             </button>
             <button className={`${s.border} ${s.button}`}>
-                <Link href="https://twitter.com/societygremlin" target="_blank">
+                <Link href="https://twitter.com/DrBradleyMexico" target="_blank">
                     <Emoji symbol="🐦" ariaLabel="bird emoji" />twitter
                 </Link>
             </button>
