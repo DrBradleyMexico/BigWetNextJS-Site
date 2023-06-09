@@ -31,6 +31,11 @@ const Footer = () => {
                 </Link>
             </button>
             <button className={`${s.border} ${s.button}`}>
+                <Link href="https://linktr.ee/Garfonomics" target="_blank">
+                    <Emoji symbol="😼" ariaLabel="orange cat" />garfield
+                </Link>
+            </button>
+            <button className={`${s.border} ${s.button}`}>
                 <Link href="mailto: &#098;&#114;&#097;&#100;&#119;&#101;&#105;&#100;&#110;&#101;&#114;&#056;&#054;&#052;&#050;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;">
                     <Emoji symbol="📩" ariaLabel="mail emoji" />contact
                 </Link>

@@ -38,7 +38,7 @@ const Links = () => {
                             <Link className={s.article} href="https://bensden.xyz/" target="_blank">
                                 {"bens development blog"}
                             </Link>
-                            <Link className={s.article} href="/secret">
+                            <Link className={s.article} href="https://linktr.ee/Garfonomics">
                                 {"secret garfield folder. DO NOT click"}
                             </Link>
                         </div>

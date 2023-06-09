@@ -25,7 +25,7 @@ const About = () => {
                             <img className={s.homeImageMore} src={"/meirl2.jpg"} alt="" />
                         </div>
                         <div className={s.articles}>
-                            {"hello! i'm brad and welcome to my very cool and fun website. this website has almost no purpose other than to teach myself some web dev concepts while sharing some things me and my friends have made. if you'd like to see connect on twitter or see my github, check the links in the footer. you can email me by smashing that contact link in the navbar. despite my offputting website, i am a friendly little guy who likes to meet and chat with people"}
+                            {"hello! i'm brad and welcome to my very cool and fun website. this website has almost no purpose other than to teach myself some computer stuff while sharing some things me and my friends have made. if you'd like to connect on twitter and other things, check the links in the footer. you can email me by smashing that contact link in the navbar. despite my offputting website, i am a friendly little guy who likes to meet and chat with people"}
                         </div>
                     </div>
                     <Footer />
