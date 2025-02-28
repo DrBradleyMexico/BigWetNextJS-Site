@@ -26,13 +26,18 @@ const Footer = () => {
                 </Link>
             </button>
             <button className={`${s.border} ${s.button}`}>
+                <Link href="https://bsky.app/profile/drmexi.co" target="_blank">
+                    <Emoji symbol="🦋" ariaLabel="butterfly emoji" />bluesky
+                </Link>
+            </button>
+            <button className={`${s.border} ${s.button}`}>
                 <Link href="https://github.com/DrBradleyMexico" target="_blank">
                     <Emoji symbol="💻" ariaLabel="laptop emoji" />github
                 </Link>
             </button>
             <button className={`${s.border} ${s.button}`}>
                 <Link href="https://linktr.ee/Garfonomics" target="_blank">
-                    <Emoji symbol="😼" ariaLabel="orange cat" />garfield
+                    <Emoji symbol="😼" ariaLabel="orange cat" />garfonomics
                 </Link>
             </button>
             <button className={`${s.border} ${s.button}`}>
