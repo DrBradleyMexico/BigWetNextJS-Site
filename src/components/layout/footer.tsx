@@ -27,7 +27,7 @@ const Footer = () => {
             </button>
             <button className={`${s.border} ${s.button}`}>
                 <Link href="https://bsky.app/profile/drmexi.co" target="_blank">
-                    <Emoji symbol="🦋" ariaLabel="butterfly emoji" />bluesky
+                    <Emoji symbol="🦋" ariaLabel="butterfly emoji" />bluesky link
                 </Link>
             </button>
             <button className={`${s.border} ${s.button}`}>
